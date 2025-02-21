@@ -104,6 +104,7 @@
     </script>
 </body>
 </html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -112,6 +113,39 @@
     <title>Skin Solutions</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
         .solution-info {
             display: none; 
             margin-top: 10px;
@@ -134,6 +168,27 @@
             color: #2980b9; 
             border: 1px solid #2980b9; 
             background-color: #f0f8ff; 
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -161,7 +216,8 @@
     </footer>
 
     <script>
-        const skinType = localStorage.getItem('skinType');
+        // Simulate getting the skin type from local storage
+        const skinType = localStorage.getItem('skinType') || 'oily'; // Default to 'oily' for testing
         const solutionContent = document.getElementById('solution-content');
         let solutions = '';
 
@@ -255,6 +311,7 @@
     </script>
 </body>
 </html>
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
